@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f892305de2.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #000000;
+  font-weight: bold; font-size: x-large;
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: rgb(0, 0, 0);
+  color: #13a700;
+  
+}
+
+li{
+  display: flex;
+}
+.nav-form{
+  align-items: center;
+}
+
+ .carousel, .carousel-inner, .carousel-item{
+                height:400px;
+            }
+            .carousel-item{
+              background-size: cover;
+            }
+            .img1{
+              background-image: url("images/liverpool\ winners.webp");
+              background-position: center;
+            }
+            .img2{
+              background-image: url("images/leeds\ winners.jpg");
+              background-position: center ;
+            }
+            .img3{
+              background-image: url("images/birmingham\ winners.jpg");
+              background-position: center ;
+            }
+            .img4{
+              background-image: url("images/doncaster\ winners.jpg");
+              background-position: center;
+            }
+          
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" width="300px">
+
+</header>
+<ul class="topnav" style="text-align: center ;">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="stadiumtracker.html">stadium tracker</a></li>
+  <li><a href="matches.html">matches,Teams and Leagues</a></li>
+  <li><a href="communityandsocials.html">community and socials</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact us</a></li>
+  <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+  <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#accountModal"><i class="fa-regular fa-circle-user"></i></a></li>
+</ul>
+
+<!-- Modal (search) -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #13a700;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Search</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #13a700;">
+         <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit" style="background-color: #f1f1f1;">Search</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal (account) -->
+<div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #13a700;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #13a700;">
+         <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1"> Remember Me</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExample" class="carousel carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active img1">
+        
+      </div>
+      <div class="carousel-item img2">
+        
+      </div>
+      <div class="carousel-item img3">
+        
+      </div>
+      <div class="carousel-item img4">
+        
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>  
+</div>
+
+
+
+
+
+<div class="card mb-3 mt-5 mr-5 ml-5">
+  <div class="card-body">
+    <h5 class="card-title" style="color: #13a700; font-size: x-large;"> stadium tracker</h5>
+    <p class="card-text"> Every fan has a story written in concrete and floodlights. From the cold Tuesday nights in the lower leagues to the roar of a 60,000-seater European powerhouse, your journey deserves more than just a memory. With our Stadium Tracker, you can officially log every ground you’ve conquered, build your personal travel map, and showcase your loyalty to the world. Don't just go to the game—mark your territory and see how your footprint compares to the global community.</p>
+  </div>
+</div>
+<div class="card mb-3 mt-2 mr-5 ml-5">
+  <div class="card-body">
+    <h5 class="card-title" style="color: #13a700; font-size: x-large;"> latest news </h5>
+    <p class="card-text">Cut through the noise and get the news that actually moves the needle. Whether it’s a late-night breaking transfer, an injury update that changes your FPL season, or an in-depth tactical breakdown of the weekend’s big derby, our News Page delivers it all. We aggregate the most reliable sources in the game so you spend less time scrolling through rumors and more time winning the debate in the group chat. Real-time updates, zero fluff.</p>
+  </div>
+</div>
+<div class="card mb-3 mt-2 mr-5 ml-5">
+  <div class="card-body">
+    <h5 class="card-title" style="color: #13a700; font-size: x-large;"> match finder</h5>
+    <p class="card-text"> Stop jumping between five different apps just to find out where the game is on. Our Match Finder is the ultimate tactical tool for the modern fan. Filter by league, date, or location to find exactly what you’re looking for—whether it’s a local clash down the road or the biggest fixtures across the continent. Plan your away days, sync your calendar, and ensure you’re never caught off guard when the whistle blows. If there’s a ball being kicked, we’ll help you find it.</p>
+  </div>
+</div>
+<div class="card mb-3 mt-2 mr-5 ml-5">
+  <div class="card-body">
+    <h5 class="card-title" style="color: #13a700; font-size: x-large;"> social pages </h5>
+    <p class="card-text"> Football is a language we all speak, but it’s best spoken with people who get it. Join the Social Page, the ultimate digital terrace where the banter never stops and the debate lives 24/7. Share your matchday photos, vent about a VAR decision, and connect with a global network of supporters who share your passion. From post-match meltdowns to tactical masterclasses, this is the place to find your tribe and make your voice heard in the beautiful game</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

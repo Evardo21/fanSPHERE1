@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f892305de2.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #000000;
+  font-weight: bold; font-size: x-large;
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: rgb(0, 0, 0);
+  color: #13a700;
+  
+}
+
+li{
+  display: flex;
+}
+.nav-form{
+  align-items: center;
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" width="300px">
+
+</header>
+<ul class="topnav" style="text-align: center ;">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="stadiumtracker.html">stadium tracker</a></li>
+  <li><a href="matches.html">matches,Teams and Leagues</a></li>
+  <li><a href="communityandsocials.html">community and socials</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact us</a></li>
+  <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+  <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#accountModal"><i class="fa-regular fa-circle-user"></i></a></li>
+</ul>
+
+<!-- Modal (search) -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #13a700;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Search</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #13a700;">
+         <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit" style="background-color: #f1f1f1;">Search</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal (account) -->
+<div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #13a700;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #13a700;">
+         <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1"> Remember Me </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  /* Hover effect: Background changes to green, text to white */
+  .news-box {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-box:hover {
+    background-color: #13a700 !important;
+    color: white !important;
+    border-color: #13a700;
+  }
+  
+  /* Ensure muted text also turns white on hover */
+  .news-box:hover .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+</style>
+
+<div class="container-fluid px-4 my-5">
+    
+    <div class="row mb-4">
+    <div class="col-12">
+        <a href="news pages/news article (wolves).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/wolvesliverpoolandre.avif" class="card-img-top" alt="News Headline" style="height: 450px; object-fit: cover; border-bottom: 5px solid #13a700;">
+                <div class="card-body p-4">
+                    <h1 class="fw-bold text-uppercase" style="color: #fff;">MOLINEUX MAYHEM: Wolves Stun Liverpool with Last-Gasp Strike as Reds Stumble Again</h1>
+                    <p class="lead text-muted mb-0">A look at how Slot's side let a lead slip in the dying minutes at Molineux, leaving their top-four hopes in the balance.</p>
+                    <p style="color: #13a700; font-weight: bold; margin-top: 15px; margin-bottom: 0;">Read More →</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row g-4">
+    
+    <div class="col-md-6">
+        <a href="news pages/news article (port vale).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/0_Port-Vale-v-Bristol-City-Emirates-FA-Cup-Fourth-Round.avif" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">CUP MAGIC: Port Vale Secure Historic FA Cup Fourth Round Upset</h4>
+                    <p class="text-muted mb-0">The Valiants stun Bristol City in a classic cup tie that will go down in Vale Park folklore</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="news pages/news article (fa cup).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/GettyImages-2202806759.webp" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">FIFTH ROUND FEVER: Pundits Deliver Bold Predictions for FA Cup Last 16</h4>
+                    <p class="text-muted mb-0">With the Fifth Round draw confirmed, the experts are clashing over who will clinch a spot in the Quarter-Finals.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="news pages/news article (Everton).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/everton.jpg" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">MOYES MASTERCLASS: Tarkowski and Dewsbury-Hall Sink Burnley</h4>
+                    <p class="text-muted mb-0">David Moyes praises a "professional performance" as James Tarkowski and Kiernan Dewsbury-Hall secure victory.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="news pages/news arcticle (lioness).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/c9aada10-173c-11f1-95f3-4f8508781bec.jpg.webp" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">SIX-STAR LIONESSES: England Women Crush Ukraine 6-1 in World Cup Qualifier</h4>
+                    <p class="text-muted mb-0">A dominant display in Ukraine sees the Lionesses kick off their qualification campaign in style.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="news pages/news article (Championship).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/championship teams.jpg" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">THE RUN-IN: Championship Heat Map Shows Battle for Promotion</h4>
+                    <p class="text-muted mb-0">As the season enters the final stretch, we look at the teams fighting to reach the Premier League.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="news pages/news article (rice).html" style="text-decoration: none; color: inherit;">
+            <div class="card news-box shadow-sm" style="background-color: #000; border: 1px solid #333;">
+                <img src="images/declan rice.avif" class="card-img-top" alt="News Headline" style="height: 250px; object-fit: cover; border-bottom: 3px solid #13a700;">
+                <div class="card-body">
+                    <h4 class="fw-bold" style="color: #fff;">RICE RACE AGAINST TIME: Declan Rice a Fitness Doubt for Brighton Trip</h4>
+                    <p class="text-muted mb-0">Mikel Arteta faces a nervous wait as the England midfielder undergoes late fitness tests.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

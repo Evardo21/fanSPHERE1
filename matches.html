@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f892305de2.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+  }
+
+  header {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Style the topnav */
+  ul.topnav {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    background-color: #000000;
+    font-weight: bold; font-size: x-large;
+  }
+
+  /* Style links in topnav */
+  ul.topnav li a {
+    display: block;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change color on hover */
+  ul.topnav li a:hover {
+    background-color: rgb(0, 0, 0);
+    color: #13a700;
+    
+  }
+
+  li{
+    display: flex;
+  }
+  .nav-form{
+    align-items: center;
+  }
+
+  .pill-btn {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #13a700;
+    border: 2px solid #13a700;
+    border-radius: 25px; /* Half of height for perfect rounded corners */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .pill-btn:hover {
+    background-color: #13a700;
+    color: white;
+  }
+
+            
+
+  </style>
+  </head>
+  <body>
+
+  <header>
+    <img src="images/logo.png" width="300px">
+
+  </header>
+  <ul class="topnav" style="text-align: center ;">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="stadiumtracker.html">stadium tracker</a></li>
+    <li><a href="matches.html">matches,Teams and Leagues</a></li>
+    <li><a href="communityandsocials.html">community and socials</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+    <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+    <li><a href="javascript:void;" data-bs-toggle="modal" data-bs-target="#accountModal"><i class="fa-regular fa-circle-user"></i></a></li>
+  </ul>
+
+  <!-- Modal (search) -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #13a700;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Search</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: #13a700;">
+          <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit" style="background-color: #f1f1f1;">Search</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal (account) -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #13a700;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: #13a700;">
+          <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1"> Remember Me </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion" id="accordionExample">
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Premier League
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="tab-content" id="matchTabContent">
+    
+    <div class="tab-pane fade show active" id="Premier league">
+      <table class="table table-bordered align-middle text-center shadow-sm">
+        <tbody>
+          <tr>
+            <td>Bournemouth vs Brentford <br> <small class="text-muted">03/03 19:30</small></td>
+            <td>Everton vs Burnley <br> <small class="text-muted">03/03 19:30</small></td>
+          </tr>
+          <tr>
+            <td>Leeds vs Sunderland <br> <small class="text-muted">03/03 19:30</small></td>
+            <td>Wolves vs Liverpool <br> <small class="text-muted">03/03 20:15</small></td>
+          </tr>
+          <tr>
+            <td>Brighton vs Arsenal <br> <small class="text-muted">04/03 19:30</small></td>
+            <td>Man City vs Nottm Forest <br> <small class="text-muted">04/03 19:30</small></td>
+          </tr>
+          <tr>
+            <td>Fulham vs West Ham <br> <small class="text-muted">04/03 19:30</small></td>
+            <td>Aston Villa vs Chelsea <br> <small class="text-muted">04/03 19:30</small></td>
+          </tr>
+          <tr>
+            <td>Newcastle vs Man Utd <br> <small class="text-muted">04/03 20:15</small></td>
+            <td>Tottenham vs Crystal Palace <br> <small class="text-muted">05/03 20:00</small></td>
+          </tr>
+        </tbody>
+        </table>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Championship
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <div class="tab-pane fade show active" id="Championship">
+      <table class="table table-bordered align-middle text-center shadow-sm">
+        <tbody>
+          <tr>
+            <td>Preston vs Oxford <br> <small class="text-muted">06/03 20:00</small></td>
+            <td>Hull vs Millwall <br> <small class="text-muted">07/03 12:30</small></td>
+          </tr>
+          <tr>
+            <td>Blackburn vs Portsmouth <br> <small class="text-muted">07/03 12:30</small></td>
+            <td>Charlton vs Birmingham <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Sheffield United vs West Brom <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Derby vs Sheffield Wednesday <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Swansea vs Stoke <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Ipswich vs Leicester <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Bristol City vs Coventry <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Watford vs Wrexham <br> <small class="text-muted">Postponed</small></td>
+          </tr>
+          <tr>
+            <td>Southampton vs Norwich <br> <small class="text-muted">Postponed</small></td>
+            <td>QPR vs Middlesbrough <br> <small class="text-muted">08/03 16:30</small></td>
+          </tr>
+        </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          League 1 
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="tab-pane fade show active" id="league 1">
+      <table class="table table-bordered align-middle text-center shadow-sm">
+        <tbody>
+          <tr>
+            <td>Cardiff vs Lincoln <br> <small class="text-muted">07/03 12:30</small></td>
+            <td>Haddersfield vs Rotherham <br> <small class="text-muted">07/03 12:30</small></td>
+          </tr>
+          <tr>
+            <td>Bradford vs Leyton Orient <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Burton vs Stevenage <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Stockport vs Mansfield <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Barnsley vs Exeter <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Peterborough vs Port Vale <br> <small class="text-muted">007/03 15:00</small></td>
+            <td>Blackpool vs Wigan <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Plymouth vs Doncaster <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Luton vs Reading <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Bolton vs Wycombe <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Wimbledon vs Northampton <br> <small class="text-muted">08/03 12:00</small></td>
+          </tr>
+        </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+          League 2
+        </button>
+      </h2>
+      <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="tab-pane fade show active" id="league 1">
+      <table class="table table-bordered align-middle text-center shadow-sm">
+        <tbody>
+          <tr>
+            <td>Cheltenham vs Barrow <br> <small class="text-muted">06/03 19:45</small></td>
+            <td>Salford vs Barnet <br> <small class="text-muted">07/03 12:30</small></td>
+          </tr>
+          <tr>
+            <td>Grimsby vs Bromley <br> <small class="text-muted">07/03 12:30</small></td>
+            <td>Walsall vs Notts county <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>MK Dons vs Harrogate<br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Bristol Rovers vs Crewe<br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Newport vs Colchester <br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Chesterfield vs Shrewsbury <br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Gillingham vs Fleetwood<br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Crawley vs Swindon<br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+          <tr>
+            <td>Tranmere vs Oldham<br> <small class="text-muted">07/03 15:00</small></td>
+            <td>Accrington vs cambridge<br> <small class="text-muted">07/03 15:00</small></td>
+          </tr>
+        </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+<h2 style="color: #f1f1f1; margin-top: 80px;"><u>Match Finder</u></h2>
+
+
+  <div style="display: flex; align-items: flex-start; gap: 0px; color: white;">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1227527.9877515344!2d-1.8410255089038448!3d53.065010622225316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sfootball%20stadiums!5e0!3m2!1sen!2suk!4v1772546389479!5m2!1sen!2suk" width="400" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+      <div style="flex: 1;">
+          <div >
+      <table class="table table-dark" style="height: 400px;">
+        <thead>
+          <tr>
+          <th scope="col">ranked distance</th>
+          <th scope="col">Match</th>
+          <th scope="col">Date and time</th>
+          <th scope="col">Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          <tr>
+          <th scope="row">#1</th>
+          <td>Man city vs Bournemouth</td>
+          <td>07/03  20:00</td>
+          <td>29 miles</td>
+        </tr>
+
+        <tr>
+          <th scope="row">#2</th>
+          <td>Derby vs Norwich</td>
+          <td>07/03  12:30</td>
+          <td>36.6 miles</td>
+        </tr>
+
+        <tr>
+          <th scope="row">#3</th>
+          <td>Rotherham vs Lincoln city </td>
+          <td>07/03  15:00</td>
+          <td>37.4 miles</td>
+        </tr>
+      
+
+          <tr>
+          <th scope="row">#4</th>
+          <td>Doncaster vs Port Vale </td>
+          <td>07/03  15:00</td>
+          <td>49.5 miles</td>
+        </tr>
+
+          <tr>
+          <th scope="row">#5</th>
+          <td>Leeds vs Brighton & Hove Albion</td>
+          <td>07/03  15:00</td>
+          <td>58.6 miles</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+ </div>
+</div> 
+
+<h2 style="color: #ffffff; margin-top: 60px; text-align: center;"><u>favourite leagues and Trophies</u></h2>
+
+<div class="container-fluid py-5">
+  <div class="row justify-content-center g-3">
+    
+    <div class="col-4">
+    <a href="favourites/championship.html" style="text-decoration: none;">
+        <button class="pill-btn">Championship</button>
+    </a>
+</div>
+    
+    <div class="col-4">
+     <a href="favourites/premierleague.html" style="text-decoration: none;"> 
+      <button class="pill-btn">Premier League</button>
+      </a>  
+    </div>
+    
+    <div class="col-4">
+      <a href="favourites/league1.html" style="text-decoration: none;">
+      <button class="pill-btn">league 1</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<h2 style="color: #ffffff; margin-top: 60px; text-align: center;"><u>favourite Teams</u></h2>
+
+<div class="container-fluid py-5">
+  <div class="row justify-content-center g-3">
+    
+    <div class="col-4">
+      <a href="favourites/Norwich.html" style="text-decoration: none;">
+      <button class="pill-btn">Norwich City</button>
+      </a>
+    </div>
+    
+    <div class="col-4">
+      <a href="favourites/LIVERPOOL.HTML" style="text-decoration: none;">
+      <button class="pill-btn">Liverpool</button>
+      </a>
+    </div>
+    
+    <div class="col-4">
+      <a href="favourites/england.HTML" style="text-decoration: none;">
+      <button class="pill-btn">England Men</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
